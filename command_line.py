@@ -36,7 +36,7 @@ for i in master_folder:
         # take all pdf in every folder we have
         all_pdf = glob.glob(f'scan_pa_budi/pdf scan/{i}/{files}/*.pdf') #take all pdf inside each folders directory
         print(all_pdf)
-        merge_pdfs = PyPDF2.PdfFileMerger()
+        merge_pdfs = PyPDF2.PdfFileMerger() #put the blank list for pdf to be merged 
         for pdf in all_pdf: #natsorted each pdf because the folders named consecutively
             merge_pdfs.append(open(pdf,'rb')) #to put the pdfs in each wo folders in list
             print(pdf)
