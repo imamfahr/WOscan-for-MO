@@ -37,7 +37,7 @@ for i in master_folder:
         all_pdf = glob.glob(f'scan_pa_budi/pdf scan/{i}/{files}/*.pdf') #take all pdf inside each folders directory
         print(all_pdf)
         merge_pdfs = PyPDF2.PdfFileMerger() #put the blank list for pdf to be merged 
-        for pdf in all_pdf: #natsorted each pdf because the folders named consecutively
+        for pdf in natsorted(all_pdf): #natsorted each pdf because the folders named consecutively
             merge_pdfs.append(open(pdf,'rb')) #to put the pdfs in each wo folders in list
             print(pdf)
             new_pdf_files = (f'E:/py made by imam/pdf merger/scan_pa_budi/new pdf scan/{i}/{files}.pdf') # this to rename the merged file name in the new directory with the previous container folders name
